@@ -1,0 +1,13 @@
+{
+  "name": "yajsc-pre-junior",
+  "version": "1.0.0",
+  "description": "Pre-Junior framework and course tasks",
+  "scripts": {},
+  "keywords": ["playwright", "aqa", "test automation", "learn js automation"],
+  "author": "ov.artem90@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.9.3"
+  }
+}
