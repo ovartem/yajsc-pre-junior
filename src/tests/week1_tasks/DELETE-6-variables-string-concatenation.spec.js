@@ -30,6 +30,11 @@ test.describe('[Part2] Complex - Mastering variables and data types', () => {
             .locator('.inventory_item_label')
             .nth(/* remove this comment - enter item index variable here */)
             .textContent();
+    /**
+     * Task 5.3:
+     * Concatenates create variables itemName and itemDescription.
+     * In the line below remove comment and add concatenation of 2 variables.
+     */
     expect(itemInfo, 'Item info is not correct').toEqual(/* remove this comment - enter code that concatenates variables (itemName and itemDescription) containing strings */);
   });
 
