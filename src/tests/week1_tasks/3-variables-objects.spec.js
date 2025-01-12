@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('[YAJSC-2] should login successfully using let & const variables and complex data type (object)', async ({ page }) => {
+test('[YAJSC-3] should login successfully using let & const variables and complex data type (object)', async ({ page }) => {
 
   /**
    * Task 2:

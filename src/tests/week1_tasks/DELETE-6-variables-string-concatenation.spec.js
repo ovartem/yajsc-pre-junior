@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('[Part2] Complex - Mastering variables and data types', () => {
   // NOTE: below block will be launched before every test in the describe (see line above) section
-  test.beforeEach(async ({page}) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
 
     await page.locator('#user-name').fill('standard_user');
@@ -10,7 +10,7 @@ test.describe('[Part2] Complex - Mastering variables and data types', () => {
     await page.locator('#login-button').click();
   })
 
-  test('[YAJSC-5] should contain item [1] info (name and description)', async ({ page }) => {
+  test('[YAJSC-6] should contain item [1] info (name and description)', async ({ page }) => {
     /**
      * Task 5.1:
      * Create const variable itemIndex with number that represents item index
@@ -30,6 +30,7 @@ test.describe('[Part2] Complex - Mastering variables and data types', () => {
             .locator('.inventory_item_label')
             .nth(/* remove this comment - enter item index variable here */)
             .textContent();
+
     /**
      * Task 5.3:
      * Concatenates create variables itemName and itemDescription.
@@ -37,5 +38,4 @@ test.describe('[Part2] Complex - Mastering variables and data types', () => {
      */
     expect(itemInfo, 'Item info is not correct').toEqual(/* remove this comment - enter code that concatenates variables (itemName and itemDescription) containing strings */);
   });
-
 });

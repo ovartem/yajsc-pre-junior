@@ -1,17 +1,16 @@
-import { BasePage } from './Base.page';
-
 export class BaseSwagLabPage {
-    constructor(page) {
-        this.page = page;
-    }
-    // header
-    mainMenuBtn = this.page.locator('TBD');
+  constructor(page) {
+    this.page = page;
+  }
 
-    shoppingCart = this.page.locator('.shopping_cart_link');
+  // header
+  mainMenuBtn = this.page.locator('TBD');
 
-    shoppingCartBadge = this.page.locator('.shopping_cart_badge');
+  shoppingCart = this.page.locator('.shopping_cart_link');
 
-    async getNumberOfItemsInCart() {
-        return this.shoppingCartBadge.textContent();
-    }
+  shoppingCartBadge = this.page.locator('.shopping_cart_badge');
+
+  async getNumberOfItemsInCart() {
+    return this.shoppingCartBadge.textContent();
+  }
 }

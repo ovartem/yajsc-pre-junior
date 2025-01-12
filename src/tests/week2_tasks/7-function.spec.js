@@ -27,10 +27,10 @@ test.describe('Functions', () => {
       password: 'secret_sauce',
     }
   ].forEach(userData => {
-    test(`boolean ${userData.userName}`, async ({ page }) => {
+    test(`[YAJSC-7] boolean ${userData.userName}`, async ({ page }) => {
       await page.goto('https://www.saucedemo.com/');
 
-      // implemented function is invoked (called) here
+      // Implemented function is invoked (called) here
       await performLogin(page, userData.userName, userData.password);
 
       const errorLocator = page.locator('[data-test="error"]');
