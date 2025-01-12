@@ -1,15 +1,15 @@
 import { BaseSwagLabPage } from './BaseSwagLab.page';
 
 export class InventoryPage extends BaseSwagLabPage {
-    url = '/inventory.html';
+  url = '/inventory.html';
 
-    headerTitle = this.page.locator('.title');
+  headerTitle = this.page.locator('.title');
 
-    inventoryItems = this.page.locator('.inventory_item');
+  inventoryItems = this.page.locator('.inventory_item');
 
-    addItemToCartButton = this.page.locator('[id^="add-to-cart"]');
+  addItemToCartButton = this.page.locator('[id^="add-to-cart"]');
 
-    async addItemToCartById(id) {
-        await this.addItemToCartButton.nth(id).click();
-    }
+  async addItemToCartById(id) {
+    await this.addItemToCartButton.nth(id).click();
+  }
 }

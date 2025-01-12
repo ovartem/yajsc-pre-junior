@@ -25,12 +25,13 @@ test.describe('Logical Operators', () => {
       password: 'secret_sauce',
     }
   ].forEach(userData => {
-    test(`boolean ${userData.userName}`, async ({ page }) => {
+    test(`[YAJSC-6] boolean ${userData.userName}`, async ({ page }) => {
       await page.locator('#user-name').fill(userData.userName);
       await page.locator('#password').fill(userData.password);
       await page.locator('#login-button').click();
 
       const errorLocator = page.locator('[data-test="error"]');
+
       /**
        * Task 6.2:
        * Update below `if-else` statement so that it performs verification whether `isUserValid` equals `false`

@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
-import {LoginPage} from "./Login.page";
-import {InventoryPage} from "./Inventory.page";
+import { LoginPage } from './Login.page';
+import { InventoryPage } from './Inventory.page';
 
-test('[YAJSC-2] 12 inventory page', async ({ page }) => {
+test('[YAJSC-12] inventory page test', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   /**
@@ -35,6 +35,7 @@ test('[YAJSC-2] 12 inventory page', async ({ page }) => {
    */
   expect(await inventoryPage.getNumberOfItemsOnPage()/* remove this comment - put `inventoryPage.getNumberOfItemsOnPage()` with `await` here */, 'Number of items on the page is not correct')
       .toBeGreaterThanOrEqual(1);
+
   /**
    * Part 3:
    * Fix below code by

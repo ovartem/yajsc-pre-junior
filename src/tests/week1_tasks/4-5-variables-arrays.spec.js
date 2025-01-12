@@ -15,9 +15,8 @@ test.describe('Mastering arrays', () => {
   // write your code below this line
   const expectedItemsNames = ['Sauce Labs Backpack'];
 
-
   // NOTE: below block will be launched before every test in the describe (see line above) section
-  test.beforeEach(async ({page}) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
 
     await page.locator('#user-name').fill(userCredentials.userName);
@@ -25,7 +24,7 @@ test.describe('Mastering arrays', () => {
     await page.locator('#login-button').click();
   })
 
-  test('[YAJSC] should contain SOME itemS nameS on the page', async ({ page }) => {
+  test('[YAJSC-4] should contain SOME itemS nameS on the page', async ({ page }) => {
     const displayedItemsName = await page.locator('[data-test="inventory-item-name"]').allTextContents();
     expect(displayedItemsName, 'Displayed item names does not contain expected values')
         .toEqual(expect.arrayContaining(/* remove this comment - put expected `expectedItemsNames` variable here */));
@@ -34,7 +33,5 @@ test.describe('Mastering arrays', () => {
   test('[YAJSC-5] should contain SPECIFIC item name on the page', async ({ page }) => {
     const displayedItemsName = await page.locator('[data-test="inventory-item-name"]').allTextContents();
     expect(displayedItemsName, 'Displayed item names does not contain expected value').toContain(/* remove this comment - put expected `expectedItemsNames` variable here and get specific item by index */);
-
-
   });
 });
